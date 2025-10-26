@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test Your Typing Skills</h1>
+        </header>
+
+        <div class="main-box">
+            <div class="stats-row">
+                <div class="timer-display">
+                    <span id="timer" class="timer-number">60</span>
+                    <span class="timer-label">seconds</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span id="wpm" class="stat-value">0</span>
+                    <span class="stat-label">words/min</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span id="cpm" class="stat-value">0</span>
+                    <span class="stat-label">chars/min</span>
+                </div>
+                
+                <div class="stat-item">
+                    <span id="accuracy" class="stat-value">0</span>
+                    <span class="stat-label">% accuracy</span>
+                </div>
+                
+                <button id="restartBtn" class="restart-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="typing-box">
+                <div id="textDisplay" class="text-display" tabindex="0">
+                    <div id="wordsContainer" class="words-container"></div>
+                </div>
+            </div>
+            
+            <div class="instruction">Click on the text and start typing...</div>
+        </div>
+
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <h2>Test Complete!</h2>
+                <div class="result-stats">
+                    <div class="result-item">
+                        <span class="result-label">Words Per Minute</span>
+                        <span id="finalWpm" class="result-value">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Characters Per Minute</span>
+                        <span id="finalCpm" class="result-value">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Accuracy</span>
+                        <span id="finalAccuracy" class="result-value">0%</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Errors</span>
+                        <span id="finalErrors" class="result-value">0</span>
+                    </div>
+                </div>
+                <button id="tryAgainBtn" class="try-again-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
